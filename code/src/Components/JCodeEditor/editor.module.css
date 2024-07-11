@@ -1,0 +1,5 @@
+.editor {
+	width: 90%;
+	margin-left: var(--panel-width);
+	height: 100dvh;
+}

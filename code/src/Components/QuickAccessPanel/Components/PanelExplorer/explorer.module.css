@@ -1,0 +1,12 @@
+:root {
+	--icon-explorer-size: 1.3rem;
+}
+
+.panel {
+	display: flex;
+}
+
+.list {
+	margin: 0 6px;
+	margin-left: 15px;
+}

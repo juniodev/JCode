@@ -1,0 +1,17 @@
+{
+   "compilerOptions": {
+      "target": "ES6",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "module": "commonjs",
+      "outDir": "./dist",
+      "removeComments": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "allowJs": true,  // Permitir arquivos .js
+      "resolveJsonModule": true  // Permitir importação de módulos JSON
+   },
+   "exclude": ["node_modules", "dist"]
+}

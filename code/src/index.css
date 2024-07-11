@@ -1,0 +1,27 @@
+* {
+	font-family: Sans-Serif;
+	user-select: none;
+	-webkit-user-select: none;
+	/* Impede a seleção de texto */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	/* Impede o menu de contexto em dispositivos iOS */
+	touch-callout: none;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	touch-action: manipulation;
+}
+
+/*.monaco-editor .margin {
+	margin: 0;
+   padding: 0;
+}*/
+
+main {
+	display: flex;
+	flex-direction: column;
+}

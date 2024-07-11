@@ -1,0 +1,33 @@
+:root {
+	--panel-width: 10vw;
+	--panel-background: #20232A;
+	--header-height: 1px;
+}
+
+.panel {
+	min-width: var(--panel-width);
+	min-height: 100%;
+	position: absolute;
+	z-index: 1;
+	top: var(--header-height);
+	display: flex;
+	align-items: flex-start;
+	overflow-x: hidden;
+	background-color:  var(--panel-background);
+	box-shadow: 0 0 1px rgba(255, 255, 255, .3)
+}
+
+.panel .options {
+	width: 100%;
+	height: 100dvh;
+	padding: 10px 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0.5px 0 0.5px rgba(255, 255, 255, .3);
+}
+
+.icon {
+	font-size: 1.8rem;
+	color: rgba(255, 255, 255, .8);
+}

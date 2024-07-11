@@ -1,0 +1,36 @@
+{
+  "name": "j-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev -r dotenv/config --respawn --transpile-only --ignore-watch node_modules src/Server.ts dotenv_config_path=.env.local",
+    "start": "node dist/Server.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@types/ws": "^8.5.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "ansi-to-html": "^0.7.2",
+    "ansi_up": "^6.0.2",
+    "chalk": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "iconv": "^3.0.1",
+    "node-ansiparser": "^2.2.1",
+    "node-ansiterminal": "^0.2.1-beta",
+    "node-pty": "*",
+    "socket.io": "^4.7.5",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0",
+    "xterm-addon-canvas": "^0.5.0",
+    "xterm-addon-fit": "^0.8.0"
+  }
+}

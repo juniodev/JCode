@@ -1,0 +1,15 @@
+:root {
+	--header-height: 5dvh;
+	--header-background: #20232A;
+}
+
+.header {
+	height: var(--header-height);
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	overflow-x: hidden;
+	box-shadow: 0 0 1px rgba(255, 255, 255, .3);
+	background-color: var(--header-background);
+}
