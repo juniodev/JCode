@@ -1,0 +1,37 @@
+.ctn {
+	padding: 5px 8px;
+	max-width: 240px;
+	min-width: 240px;
+	overflow: hidden;
+}
+
+.explore {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--text-color);
+
+	div:nth-child(1) {
+		display: flex;
+		align-items: center;
+		
+		.icon {
+			font-size: 1.2rem;
+			margin-right: 6px;
+		}
+	}
+
+	div:nth-child(2) {
+		display: flex;
+		align-items: center;
+
+		.icon1 {
+			margin-right: 5px;
+			font-size: 1.35rem;
+		}
+		.icon2 {
+			font-size: 1.1rem;
+		}
+	}
+
+}

@@ -1,20 +1,29 @@
+import styles from './list.module.scss'
+
 import FileExplorer from '../FileExplorer/'
-//import { v4 as uuid } from 'uuid'
+
 interface Props {
+	marginChildrenMarginLeft?: string
+	style: Record<string, any>
 	list: any
 	marginLeft?: string
 }
 
-const ListExplorer = ({
-	list,
-	marginLeft
-}: Props) => {
+const ListExplorer = ({ list, marginChildrenMarginLeft, ...props }: any) => {
+	
+	
+	if (!list) return <></>
 	return <>
 		{
 			list.map((v, i) => {
-				return <div style={{
-					marginLeft: marginLeft
-				}} key={v.path}>
+				return <div 
+					{...props} 
+					className={styles.list} 
+					key={v.path}
+					style={{
+						marginLeft: marginChildrenMarginLeft
+					}}
+				>
 					<FileExplorer 
 						id={v.full_path}
 						type={v.type} 

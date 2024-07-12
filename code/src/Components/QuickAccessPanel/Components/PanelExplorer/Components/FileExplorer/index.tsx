@@ -1,4 +1,4 @@
-import styles from './explorer.module.css'
+import styles from './explore.module.scss'
 import { useState, useContext, useEffect } from 'react'
 
 import { MdOutlineExpandLess, MdOutlineExpandMore } from 'react-icons/md'
@@ -44,13 +44,22 @@ const FileExplorer = ({
 				<img
 					src={selectIcon(path, type)}
 					onContextMenu={(e) => e.preventDefault()}
+					style={{
+						height: type !== 'directory' ? '13px' : '20px'
+					}}
 				/>
-				<span>{path}</span>
+				<span style={{
+					fontSize: type !== 'directory' ? '.78rem' : '.85rem'
+				}}>{path}</span>
 			</div>
 		</div>
 		
 		{
-			isExpanded(id, type) && directories && <ListExplorer list={directories} marginLeft="8px" />
+			isExpanded(id, type) && directories && <ListExplorer 
+				list={directories}
+				marginChildrenMarginLeft='15px'
+				
+			/>
 		}
 	</>
 }

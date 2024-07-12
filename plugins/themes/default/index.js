@@ -33,7 +33,8 @@ const PluginDefaultTheme = {
 			'routing': 'icons/routing.svg',
 			'tsconfig.app.json': 'icons/tsconfig.svg',
 			'tsconfig.node.json': 'icons/tsconfig.svg',
-			'package.json': 'icons/nodejs.svg'
+			'package.json': 'icons/nodejs.svg',
+			'.nvmrc': 'icons/nodejs.svg',
 		},
 		file: {
 			default: 'icons/file.svg',
@@ -45,7 +46,8 @@ const PluginDefaultTheme = {
 				'md': 'icons/readme.svg',
 				'json': 'icons/json.svg',
 				'svg': 'icons/svg.svg',
-				'tsx': 'icons/react.svg'
+				'tsx': 'icons/react.svg',
+				'scss': 'icons/sass.svg'
 			}
 		}
 	},

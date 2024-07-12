@@ -34,6 +34,7 @@ class JCodePluginManager {
 	
 		private plugins: PluginInstance[] = []
 		private initialized: boolean = false
+		
 
 		constructor() {
 			this.plugins = []
@@ -51,6 +52,9 @@ class JCodePluginManager {
 			this.icons = icons;
 		}
 		setThemeColors(colors: Colors) {
+			
+			const style = document.documentElement.style
+			
 			Object.assign(document.documentElement.style, {
 				'background-color': colors.backgroundColor
 			})
@@ -58,7 +62,8 @@ class JCodePluginManager {
 			if (metaThemeColor) {
 				metaThemeColor.setAttribute('content', colors.secondaryColor)
 			}
-			//document.querySelector('meta[name="theme-color"]').setAtribute('content', '#678908')
+			
+			style.setProperty('--text-color', colors.textColor)
 		}
 
 }
