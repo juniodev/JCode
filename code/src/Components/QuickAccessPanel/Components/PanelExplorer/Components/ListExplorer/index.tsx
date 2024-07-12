@@ -16,6 +16,7 @@ const ListExplorer = ({
 					marginLeft: marginLeft
 				}} key={v.path}>
 					<FileExplorer 
+						id={v.full_path}
 						type={v.type} 
 						path={v.path}
 						directories={v.directories}

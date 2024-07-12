@@ -1,44 +1,56 @@
 import styles from './explorer.module.css'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
+
+import { MdOutlineExpandLess, MdOutlineExpandMore } from 'react-icons/md'
 
 import { selectFileExplorer } from './SelectFileExplorer'
 
 import ListExplorer from '../ListExplorer'
 
+import { ExploreContext } from '../../Context/ExploreProvider'
+
 interface Props {
-	key,
-	path
+	id: string
+	path,
+	type,
+	directories
 }
 
 const FileExplorer = ({
-	key,
+	id,
 	type,
 	path,
 	directories
 }: Props) => {
 	
-	const [expand, setExpand] = useState<boolean>(false)
+	const {
+		expandeds,
+		isExpanded,
+		setFolderExpand
+	} = useContext(ExploreContext)
 	
 	const {
 		selectIcon
 	} = selectFileExplorer()
 	
-	const handleExpandList = () => {
-		if (type === 'directory') {
-			setExpand(!expand)
-		}
-	}
-	
 	return <>
-		<div key={key} className={styles.ctn} onClick={handleExpandList}>
-			<img
-				src={selectIcon(path, type)}
-				onContextMenu={(e) => e.preventDefault()}
-			/>
-			<span>{path}</span>
+		<div key={id} className={styles.ctn} onClick={() => {
+			setFolderExpand(id, type)
+		}} >
+			<div className={styles.box}>
+				{
+					type === 'directory' && <MdOutlineExpandMore className={styles.icon} />
+				}
+				<img
+					src={selectIcon(path, type)}
+					onContextMenu={(e) => e.preventDefault()}
+				/>
+				<span>{path}</span>
+			</div>
 		</div>
+		
 		{
-			expand && directories && <ListExplorer list={directories} marginLeft="15px" />
+			isExpanded(id, type) && directories && <ListExplorer list={directories} marginLeft="8px" />
 		}
 	</>
 }

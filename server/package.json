@@ -1,5 +1,5 @@
 {
-  "name": "j-code",
+  "name": "server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,20 +17,12 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "ansi-to-html": "^0.7.2",
-    "ansi_up": "^6.0.2",
-    "chalk": "^5.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "iconv": "^3.0.1",
-    "node-ansiparser": "^2.2.1",
-    "node-ansiterminal": "^0.2.1-beta",
     "node-pty": "*",
     "socket.io": "^4.7.5",
     "uuid": "^10.0.0",
-    "ws": "^8.18.0",
-    "xterm-addon-canvas": "^0.5.0",
-    "xterm-addon-fit": "^0.8.0"
+    "ws": "^8.18.0"
   }
 }

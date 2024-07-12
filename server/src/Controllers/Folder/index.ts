@@ -36,7 +36,7 @@ class FolderController {
 	async load(req: Request, res: Response) {
 		try {
 
-			const directory = path.resolve('/root/jcode/test')
+			const directory = path.resolve('/root/jcode/code')
 
 			const files = await fsPromise.readdir(directory)
 
@@ -71,6 +71,7 @@ class FolderController {
 
 					filesFolders.push({
 						path: file,
+						full_path: fullDirectory,
 						protected: false,
 						type: stats.isDirectory() ? 'directory': 'file',
 						directories: others
@@ -79,6 +80,7 @@ class FolderController {
 				} catch (err) {
 					filesFolders.push({
 						path: file,
+						full_path: fullDirectory,
 						protected: err ? err.code === 'EACCES': false,
 						type: stats.isDirectory() ? 'directory': 'file'
 					})

@@ -1,5 +1,5 @@
 :root {
-	--icon-explorer-size: 1.3rem;
+	--icon-explorer-size: 1.2rem;
 }
 
 .panel {
@@ -7,6 +7,6 @@
 }
 
 .list {
-	margin: 0 6px;
-	margin-left: 15px;
+	min-width: 220px;
+	margin-left: 10px;
 }

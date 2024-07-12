@@ -6,6 +6,7 @@
 	"workspaces": [
 		"code",
 		"server",
-		"plugins"
+		"plugins",
+		"packages/*"
 	]
 }

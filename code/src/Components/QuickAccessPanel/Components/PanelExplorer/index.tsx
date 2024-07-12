@@ -8,6 +8,8 @@ import {
 	loadProject
 } from './Hooks/LoadProject'
 
+import ExploreProvider from './Context/ExploreProvider'
+
 import ListExplorer from './Components/ListExplorer'
 
 const PanelExplorer = () => {
@@ -16,12 +18,16 @@ const PanelExplorer = () => {
 		load,
 		list
 	} = loadProject()
-
-	return <div className={styles.list}>
-		{
-			list && <ListExplorer list={list}/>
-		}
-	</div>
+	
+	return <>
+		<ExploreProvider>
+			 <div className={styles.list}>
+				{
+					list && <ListExplorer list={list}/>
+				}
+			</div>
+		</ExploreProvider>
+	</>
 }
 
 export default PanelExplorer
